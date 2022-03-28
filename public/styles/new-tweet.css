@@ -1,7 +1,5 @@
 .new-tweet {
-  display: flex;
-  justify-content: center;
-  border: 2px solid black;
+  margin-top: 30px;
 }
 
 .new-tweet button {
@@ -12,12 +10,45 @@
 }
 
 .new-tweet form div {
+  margin-top: 10px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   font-family: 'Bungee', cursive;
 }
 
+.new-tweet textarea {
+  display: block;
+  box-sizing: padding-box;
+  padding: 10px;
+  overflow: hidden;
+  background: transparent;
+  resize: none;
+  outline: none;
+  border: 0;
+  width: 100%;
+}
+
+.new-tweet textarea::placeholder {
+  color: #545149;
+  opacity: 1;
+  font-weight: bolder;
+}
+
 .counter {
   font-family: 'Bungee', cursive;
   align-self: center;
+}
+
+.new-tweet form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.new-tweet hr {
+  border: 2px solid #545149;
+  width: 100%;
 }
