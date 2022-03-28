@@ -1,0 +1,23 @@
+.new-tweet {
+  display: flex;
+  justify-content: center;
+  border: 2px solid black;
+}
+
+.new-tweet button {
+  background-color: #4056A1;
+  color: #fff;
+  height: 45px;
+  width: 110px;
+}
+
+.new-tweet form div {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Bungee', cursive;
+}
+
+.counter {
+  font-family: 'Bungee', cursive;
+  align-self: center;
+}
