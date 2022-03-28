@@ -1,0 +1,35 @@
+nav {
+  height: 120px;
+  width: 100vw;
+  background-color: #4056A1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: -1;
+}
+
+nav > span, nav > div { 
+  font-family: 'Bungee', cursive;
+  color: #FFFFFF;
+  margin: 0px 1.5em;
+}
+
+nav > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: flex-end;
+}
+
+nav > div span {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+nav span > span {
+  font-weight: 600;
+}
+
+nav i {
+  color: red;
+  margin: 10px 0 15px;
+}
