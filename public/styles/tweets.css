@@ -1,5 +1,7 @@
 article.tweets {
-  border: 3px #545149 solid;  
+  border: 3px #545149 solid; 
+  margin: 2em 0; 
+  padding: 15px;
 }
 
 article.tweets header {
@@ -14,5 +16,25 @@ article.tweets footer {
 
 article.tweets hr {
   border: 2px solid #545149;
-  width: 98%;
+  width: 100%;
+}
+
+/* Display Name */
+article.tweets header div > span {
+}
+
+/* @username */
+article.tweets header > span {
+  opacity: 0.6;
+}
+
+/* Tweet itself */
+article.tweets > span {
+  font-weight: 600;
+}
+
+/* Date tweeted */
+article.tweets > footer > span {
+  font-size: 15px;
+  font-weight: 600;
 }
