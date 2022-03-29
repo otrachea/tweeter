@@ -33,8 +33,8 @@ $(document).ready(function () {
   }
 
   const renderTweets = function (tweets) {
-    for (const tweet of tweets) {
-      $('.tweets-container').append(createTweetElement(tweet));
+    for (let i = tweets.length - 1; i >= 0; i--) {
+      $('.tweets-container').append(createTweetElement(tweets[i]));
     }
   }
 
