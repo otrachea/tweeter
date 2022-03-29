@@ -21,7 +21,7 @@ $(document).ready(function () {
         </div>
         <hr>
         <footer>
-          <span>${Math.floor(((new Date()).getTime() - tweetData.created_at) / (1000 * 3600 * 24))} days ago</span>
+          <span>${timeago.format(tweetData.created_at)}</span>
           <div>
             <i class="fa-solid fa-flag fa-xs"></i>
             <i class="fa-solid fa-retweet fa-sm"></i>
