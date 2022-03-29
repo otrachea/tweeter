@@ -7,4 +7,6 @@ body > header {
   flex-direction: column;
   background-color: #7588AA;
   background-image: url("../images/bg.png");
+  position: relative;
+  top: 120px;
 }
