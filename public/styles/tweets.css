@@ -44,10 +44,6 @@ article.tweets hr {
   width: 100%;
 }
 
-/* Display Name */
-article.tweets header div > span {
-}
-
 /* @username */
 article.tweets header > span {
   opacity: 0.6;
