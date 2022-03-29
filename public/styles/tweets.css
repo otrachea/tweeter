@@ -14,8 +14,26 @@ article.tweets-container:hover {
 article.tweets-container header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 0.5em 0 1em;
   padding: 0 0.3em;
+}
+
+/* Display Name + Avatar Div*/
+article.tweets-container header > div {
+  display: flex;
+  align-items: center;
+}
+
+/* Display Name + Avatar margins for eaach*/
+article.tweets-container header > div > div,
+article.tweets-container header > div > img {
+  margin-right: 15px;
+}
+
+/* @username */
+article.tweets-container header > span {
+  opacity: 0.6;
 }
 
 /* Footer */
@@ -42,11 +60,6 @@ article.tweets-container hr {
   margin: 1em 0 0.5em;
   border: 2px solid #545149;
   width: 100%;
-}
-
-/* @username */
-article.tweets-container header > span {
-  opacity: 0.6;
 }
 
 /* Tweet itself */
