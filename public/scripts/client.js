@@ -38,6 +38,12 @@ $(document).ready(function () {
     }
   }
 
+  const loadTweets = function () {
+    $.get("http://localhost:8080/tweets", function (data) {
+      renderTweets(data);
+    });
+  }
+
   const tweetData = [
     {
       "user": {
@@ -63,9 +69,10 @@ $(document).ready(function () {
     }
   ];
 
-  renderTweets(tweetData);
+  // renderTweets(tweetData);
+  loadTweets();
 
-  $("form").on("submit", function(event) {
+  $("form").on("submit", function (event) {
     event.preventDefault();
     $.post("/tweets/", $(this).serialize());
   })
