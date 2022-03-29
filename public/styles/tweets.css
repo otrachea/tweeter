@@ -1,4 +1,4 @@
-article.tweets-container {
+.tweets-container > article {
   border: 3px #545149 solid; 
   margin: 2em 0; 
   padding: 15px;
@@ -6,12 +6,12 @@ article.tweets-container {
 }
 
 /* Hover over tweet */
-article.tweets-container:hover {
+.tweets-container > article:hover {
   box-shadow: 7px 6px 0px 2px rgba(170,172,176,0.6);
 }
 
 /* Header */
-article.tweets-container header {
+.tweets-container > article header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,24 +20,24 @@ article.tweets-container header {
 }
 
 /* Display Name + Avatar Div*/
-article.tweets-container header > div {
+.tweets-container > article header > div {
   display: flex;
   align-items: center;
 }
 
 /* Display Name + Avatar margins for eaach*/
-article.tweets-container header > div > div,
-article.tweets-container header > div > img {
+.tweets-container > article header > div > div,
+.tweets-container > article header > div > img {
   margin-right: 15px;
 }
 
 /* @username */
-article.tweets-container header > span {
+.tweets-container > article header > span {
   opacity: 0.6;
 }
 
 /* Footer */
-article.tweets-container footer {
+.tweets-container > article footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,31 +45,31 @@ article.tweets-container footer {
 }
 
 /* Icons in footer */
-article.tweets-container footer > div > i {
+.tweets-container > article footer > div > i {
   margin: 0 7px;
   transition: color 0.15s ease-out;
 }
 
 /* Hover over icons */
-article.tweets-container footer > div > i:hover {
+.tweets-container > article footer > div > i:hover {
   color: #FFB100;
 }
 
 /* Horizontal Bar */
-article.tweets-container hr {
+.tweets-container > article hr {
   margin: 1em 0 0.5em;
   border: 2px solid #545149;
   width: 100%;
 }
 
 /* Tweet itself */
-article.tweets-container > div {
+.tweets-container > article > div {
   font-weight: 600;
   padding: 0 0.3em;
 }
 
 /* Date tweeted */
-article.tweets-container > footer > span {
+.tweets-container > article > footer > span {
   font-size: 17px;
   font-weight: 600;
 }
