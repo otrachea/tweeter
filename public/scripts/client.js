@@ -6,18 +6,24 @@
 
 $(document).ready(function () {
 
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
+
   const createTweetElement = function (tweetData) {
     return $(`
       <article>
         <header>
           <div>
             <img src="${tweetData.user.avatars}">
-            <div>${tweetData.user.name}</div>
+            <div>${escape(tweetData.user.name)}</div>
           </div>
-          <div>${tweetData.user.handle}</div>
+          <div>${escape(tweetData.user.handle)}</div>
         </header>
         <div>
-          ${tweetData.content.text}
+          ${escape(tweetData.content.text)}
         </div>
         <hr>
         <footer>
@@ -33,8 +39,8 @@ $(document).ready(function () {
   }
 
   const renderTweets = function (tweets) {
-    for (let i = tweets.length - 1; i >= 0; i--) {
-      $('.tweets-container').append(createTweetElement(tweets[i]));
+    for (const tweet of tweets) {
+      $('.tweets-container').prepend(createTweetElement(tweet));
     }
   }
 
@@ -59,8 +65,12 @@ $(document).ready(function () {
       return;
     }
 
-    $.post("/tweets/", $(this).serialize());
-
+    $.post("/tweets/", $(this).serialize(), () => {
+      $(this).children("textarea").val("");
+      $.get("http://localhost:8080/tweets", function (data) {
+        $('.tweets-container').prepend(createTweetElement(data.pop()));
+      });
+    });
   })
 
 });
