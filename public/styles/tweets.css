@@ -1,0 +1,18 @@
+article.tweets {
+  border: 3px #545149 solid;  
+}
+
+article.tweets header {
+  display: flex;
+  justify-content: space-between;
+}
+
+article.tweets footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+article.tweets hr {
+  border: 2px solid #545149;
+  width: 98%;
+}
