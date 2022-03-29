@@ -4,17 +4,30 @@ article.tweets {
   padding: 15px;
 }
 
+/* Header */
 article.tweets header {
   display: flex;
   justify-content: space-between;
+  margin: 0.5em 0 1em;
+  padding: 0 0.3em;
 }
 
+/* Footer */
 article.tweets footer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 0 0.3em;
 }
 
+/* Icons in footer */
+article.tweets footer > div > i {
+  margin: 0 7px;
+}
+
+/* Horizontal Bar */
 article.tweets hr {
+  margin: 1em 0 0.5em;
   border: 2px solid #545149;
   width: 100%;
 }
@@ -29,12 +42,13 @@ article.tweets header > span {
 }
 
 /* Tweet itself */
-article.tweets > span {
+article.tweets > div {
   font-weight: 600;
+  padding: 0 0.3em;
 }
 
 /* Date tweeted */
 article.tweets > footer > span {
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 600;
 }
