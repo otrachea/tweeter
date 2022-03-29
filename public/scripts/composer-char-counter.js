@@ -2,7 +2,7 @@ const clear = function(selector) {
   $(selector).val("");
 }
 
-$(document).ready(() => {
+$(document).ready(function() {
 
   clear("#tweet-text")
 
