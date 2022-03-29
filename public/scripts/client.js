@@ -48,7 +48,19 @@ $(document).ready(function () {
 
   $("form").on("submit", function (event) {
     event.preventDefault();
+    let text = $(this).children("textarea").val();
+    if (!text) {
+      alert("Tweet cannot be empty");
+      return;
+    }
+
+    if (text.length > 140) {
+      alert("Tweet must be 140 characters or less");
+      return;
+    }
+
     $.post("/tweets/", $(this).serialize());
+
   })
 
 });
