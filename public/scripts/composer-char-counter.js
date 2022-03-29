@@ -1,3 +1,7 @@
 $(document).ready(() => {
-  console.log("ready");
+  $(".counter").text(140 - $("#tweet-text").val().length);
+
+  $("#tweet-text").on("input", function() {
+    $(".counter").text(140 - $(this).val().length);
+  })
 });
