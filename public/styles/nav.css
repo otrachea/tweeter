@@ -23,10 +23,6 @@ nav > div {
   align-self: flex-end;
 }
 
-nav > div span {
-  font-family: 'Source Sans Pro', sans-serif;
-}
-
 nav span > span {
   font-weight: 600;
 }
@@ -34,4 +30,9 @@ nav span > span {
 nav i {
   color: red;
   margin: 10px 0 15px;
+}
+
+nav button {
+  all: unset;
+  cursor: pointer;
 }

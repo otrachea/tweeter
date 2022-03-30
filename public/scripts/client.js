@@ -79,4 +79,15 @@ $(() => {
 
   })
 
+  const showNewTweet = function() {
+    let container = $(".new-tweet");
+    if (container.css("display") === "none") {
+      container.slideDown();
+      $("#tweet-text").focus();
+    } else {
+      container.slideUp();
+    }
+  }
+
+  $("nav > div > button").on("click", showNewTweet);
 });
