@@ -107,9 +107,7 @@ $(() => {
   }
 
   $(document).on("scroll", function() {
-    let y = window.scrollY;
-
-    if (y >= 120) {
+    if (window.scrollY >= 120) {
       fadeIn($("main > button"));
       fadeOut($("nav > div"));
     } else {
