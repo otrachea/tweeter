@@ -80,12 +80,12 @@ $(() => {
   })
 
   const showNewTweet = function() {
-    let container = $(".new-tweet");
-    if (container.css("display") === "none") {
-      container.slideDown();
+    let section = $(".new-tweet");
+    if (section.css("display") === "none") {
+      section.slideDown();
       $("#tweet-text").focus();
     } else {
-      container.slideUp();
+      section.slideUp();
     }
   }
 
