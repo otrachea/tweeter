@@ -53,31 +53,22 @@ $(() => {
 
   $("form").on("submit", function (event) {
     event.preventDefault();
-    let text = $(this).children("textarea").val();
-    if (!text) {
-      $("main").prepend($(`
-        <section class="error-container">
-          <i class="fa-solid fa-triangle-exclamation"></i>
-          <span>Tweet cannot be empty.</span>
-          <i class="fa-solid fa-triangle-exclamation"></i>
-        </section>`
-      ));
+    let text = $(this).children("textarea");
+
+    if (!text.val()) {
+      $(".error-container span").text("Tweet cannot be empty");
+      $(".error-container").slideDown();
       return;
     }
 
-    if (text.length > 140) {
-      $("main").prepend($(`
-        <section class="error-container">
-          <i class="fa-solid fa-triangle-exclamation"></i>
-          <span>Tweet must be 140 characters or less.</span>
-          <i class="fa-solid fa-triangle-exclamation"></i>
-        </section>`
-      ));
+    if (text.val().length > 140) {
+      $(".error-container span").text("Tweet msut be 140 characters or less");
+      $(".error-container").slideDown();
       return;
     }
 
-    if ($(".error-container").length !== 0) {
-      $(".error-container").remove();
+    if ($(".error-container").css("display") !== "none") {
+      $(".error-container").slideUp();
     }    
 
     // $.post("/tweets/", $(this).serialize(), () => {
@@ -88,7 +79,7 @@ $(() => {
     // });
 
     $.post("/tweets/", $(this).serialize(), () => {
-      $(this).children("textarea").val("");
+      text.val("");
       $.get("http://localhost:8080/tweets").then((data) => {
         $('.tweets-container').prepend(createTweetElement(data.pop()));
       });
