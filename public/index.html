@@ -31,6 +31,9 @@
   <!-- Tweets container CSS -->
   <link rel="stylesheet" href="/styles/tweets.css" type="text/css">
 
+  <!-- Error CSS -->
+  <link rel="stylesheet" href="/styles/error.css" type="text/css">
+
   <!-- font awesome assets -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
@@ -72,6 +75,12 @@
 
   <!-- Page-specific (main) content here -->
   <main class="container">
+    <section class="error-container">
+      <i class="fa-solid fa-triangle-exclamation"></i>
+      <span>Error for some reason</span>
+      <i class="fa-solid fa-triangle-exclamation"></i>
+    </section>
+
     <section class="new-tweet">
       <form method="POST" action="/tweets/">
         <textarea name="text" id="tweet-text" rows="1" placeholder="What are you humming about?"></textarea>

@@ -30,9 +30,8 @@ body {
 
  main {
    width: 90%;
-   align-self: center;
    margin: 0 auto;
    background-color: #F4F7F4;
-   padding: 0px 15px;
+   padding: 15px 15px;
    position: relative;
  }

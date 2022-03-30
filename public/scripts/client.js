@@ -4,7 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
 */
 
-$(document).ready(function () {
+$(() => {
 
   const escape = function (str) {
     let div = document.createElement("div");
@@ -45,9 +45,8 @@ $(document).ready(function () {
   }
 
   const loadTweets = function () {
-    $.get("http://localhost:8080/tweets", function (data) {
-      renderTweets(data);
-    });
+    $.get("http://localhost:8080/tweets")
+      .then(data => renderTweets(data));
   }
 
   loadTweets();
@@ -65,12 +64,26 @@ $(document).ready(function () {
       return;
     }
 
+    // $.post("/tweets/", $(this).serialize(), () => {
+    //   $(this).children("textarea").val("");
+    //   $.get("http://localhost:8080/tweets", function (data) {
+    //     $('.tweets-container').prepend(createTweetElement(data.pop()));
+    //   });
+    // });
+
     $.post("/tweets/", $(this).serialize(), () => {
       $(this).children("textarea").val("");
-      $.get("http://localhost:8080/tweets", function (data) {
+      $.get("http://localhost:8080/tweets").then((data) => {
         $('.tweets-container').prepend(createTweetElement(data.pop()));
       });
     });
+
+    // $.post("/tweets/", $(this).serialize())
+    //   .then(() => $(this).children("textarea").val(""))
+    //   .then($.get("http://localhost:8080/tweets", function (data) {
+    //     $('.tweets-container').prepend(createTweetElement(data.pop()));
+    // }));
+
   })
 
 });

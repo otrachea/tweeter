@@ -1,0 +1,15 @@
+section.error-container {
+  border: 3px solid #ff0000;
+  text-align: center;
+
+}
+
+section.error-container > i {
+  color: #ff0000;
+  margin: 0.5em 1em;
+}
+
+section.error-container > span {
+  color: #ff0000;
+  font-weight: bold;
+}

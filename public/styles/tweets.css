@@ -1,3 +1,7 @@
+.tweets-container {
+  padding-bottom: 1em;
+}
+
 .tweets-container > article {
   border: 3px #545149 solid; 
   margin: 2em 0; 
