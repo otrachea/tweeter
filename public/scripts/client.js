@@ -90,4 +90,31 @@ $(() => {
   }
 
   $("nav > div > button").on("click", showNewTweet);
+
+  $("main > button").on("click", function () {
+    console.log("a");
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  })
+
+  const fadeIn = function (element) {
+    element.addClass("fade-in");
+    element.removeClass("fade-out");
+  }
+
+  const fadeOut = function (element) {
+    element.addClass("fade-out");
+    element.removeClass("fade-in");
+  }
+
+  $(document).on("scroll", function() {
+    let y = window.scrollY;
+
+    if (y >= 120) {
+      fadeIn($("main > button"));
+      fadeOut($("nav > div"));
+    } else {
+      fadeOut($("main > button"));
+      fadeIn($("nav > div"));
+    }
+  })
 });

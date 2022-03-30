@@ -38,10 +38,10 @@ main {
 
 main > button {
   all: unset;
+  opacity: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* display: none; */
   border-radius: 50%;
   background-color: #ff0000;
   position: fixed;
@@ -50,5 +50,15 @@ main > button {
   width: 80px;
   height: 80px;
   cursor: pointer;
-  color: #ffffff
+  color: #ffffff;
+}
+
+.fade-in {
+  transition: opacity 0.1s linear;
+  opacity: 1;
+}
+
+.fade-out {
+  transition: opacity 0.1s linear;
+  opacity: 0;
 }
