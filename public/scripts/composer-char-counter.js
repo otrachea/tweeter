@@ -1,8 +1,9 @@
-const clear = function(selector) {
-  $(selector).val("");
-}
 
-$(document).ready(function() {
+$(() => {
+  
+  const clear = function(selector) {
+    $(selector).val("");
+  }
 
   clear("#tweet-text")
 
