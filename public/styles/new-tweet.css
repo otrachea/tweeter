@@ -1,7 +1,10 @@
 .new-tweet {
-  margin-top: 30px;
-  padding-top: 10px;
+  margin-top: 10px;
   display: none;
+}
+
+.new-tweet form {
+  margin-top: 10px;
 }
 
 .new-tweet button {

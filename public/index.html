@@ -75,13 +75,15 @@
 
   <!-- Page-specific (main) content here -->
   <main class="container">
-    <section class="error-container">
-      <i class="fa-solid fa-triangle-exclamation"></i>
-      <span></span>
-      <i class="fa-solid fa-triangle-exclamation"></i>
-    </section>
-
+    
     <section class="new-tweet">
+
+      <section class="error-container">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <span></span>
+        <i class="fa-solid fa-triangle-exclamation"></i>
+      </section>
+      
       <form method="POST" action="/tweets/">
         <textarea name="text" id="tweet-text" rows="1" placeholder="What are you humming about?"></textarea>
         <hr>
