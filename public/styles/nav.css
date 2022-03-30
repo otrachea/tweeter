@@ -2,12 +2,13 @@ nav {
   position: sticky;
   top: 0;
   height: 120px;
-  width: 100vw;
+  width: 100%;
   background-color: #4056A1;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 1;
+  overflow: hidden;
 }
 
 nav > span, nav > div { 
