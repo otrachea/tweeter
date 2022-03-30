@@ -55,14 +55,30 @@ $(() => {
     event.preventDefault();
     let text = $(this).children("textarea").val();
     if (!text) {
-      alert("Tweet cannot be empty");
+      $("main").prepend($(`
+        <section class="error-container">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          <span>Tweet cannot be empty.</span>
+          <i class="fa-solid fa-triangle-exclamation"></i>
+        </section>`
+      ));
       return;
     }
 
     if (text.length > 140) {
-      alert("Tweet must be 140 characters or less");
+      $("main").prepend($(`
+        <section class="error-container">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          <span>Tweet must be 140 characters or less.</span>
+          <i class="fa-solid fa-triangle-exclamation"></i>
+        </section>`
+      ));
       return;
     }
+
+    if ($(".error-container").length !== 0) {
+      $(".error-container").remove();
+    }    
 
     // $.post("/tweets/", $(this).serialize(), () => {
     //   $(this).children("textarea").val("");
