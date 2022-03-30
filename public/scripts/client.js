@@ -71,25 +71,11 @@ $(() => {
       $(".error-container").slideUp();
     }    
 
-    // $.post("/tweets/", $(this).serialize(), () => {
-    //   $(this).children("textarea").val("");
-    //   $.get("http://localhost:8080/tweets", function (data) {
-    //     $('.tweets-container').prepend(createTweetElement(data.pop()));
-    //   });
-    // });
-
-    $.post("/tweets/", $(this).serialize(), () => {
-      text.val("");
-      $.get("http://localhost:8080/tweets").then((data) => {
+    $.post("/tweets/", $(this).serialize())
+      .then(() => $(this).children("textarea").val(""))
+      .then($.get("http://localhost:8080/tweets").then(data => {
         $('.tweets-container').prepend(createTweetElement(data.pop()));
-      });
-    });
-
-    // $.post("/tweets/", $(this).serialize())
-    //   .then(() => $(this).children("textarea").val(""))
-    //   .then($.get("http://localhost:8080/tweets", function (data) {
-    //     $('.tweets-container').prepend(createTweetElement(data.pop()));
-    // }));
+    }));
 
   })
 
