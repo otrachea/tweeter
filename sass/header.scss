@@ -1,0 +1,19 @@
+body .content > header {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #7588AA;
+  background-image: url("../images/bg.png");
+}
+
+@media screen and (min-width: 1024px) {
+  body .content > header {
+    width: 400px;
+    height: 400px;
+    margin-top: 50px;
+    margin-left: 10px;
+  }
+}

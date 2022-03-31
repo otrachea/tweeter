@@ -1,0 +1,88 @@
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*
+ * Global layout stuff
+ */
+
+body {
+  color: #545149;
+  background-color: #f4f1ec;
+  font-size: 24px;
+  /* height: 100%;
+  width: 100%; */
+}
+
+* {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/*
+ * Additional CSS can be defined below or in other CSS files, as per instructions
+ */
+
+
+
+main {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #F4F7F4;
+  padding: 15px 15px;
+  position: relative;
+}
+
+main > button {
+  all: unset;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #ff0000;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.fade-in {
+  transition: opacity 0.1s linear;
+  opacity: 1;
+}
+
+.fade-out {
+  transition: opacity 0.1s linear;
+  opacity: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+    .content {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+  main {
+    max-width: 800px;
+    width: 60%;
+    margin: unset;
+    margin-left: 50px;
+  }
+}
