@@ -19,7 +19,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  font-family: 'Bungee', cursive;
+  font-family: "Bungee", cursive;
 }
 
 .new-tweet textarea {
@@ -41,7 +41,7 @@
 }
 
 .counter {
-  font-family: 'Bungee', cursive;
+  font-family: "Bungee", cursive;
   align-self: center;
 }
 
