@@ -62,7 +62,7 @@ $(() => {
     }
 
     if (text.val().length > 140) {
-      $(".error-container span").text("Tweet msut be 140 characters or less");
+      $(".error-container span").text("Tweet must be 140 characters or less");
       $(".error-container").slideDown();
       return;
     }
@@ -71,16 +71,13 @@ $(() => {
       $(".error-container").slideUp();
     }
 
-    // $.post("/tweets/", $(this).serialize())
-    //   .then(() => $(this).children("textarea").val(""))
-    //   .then($.get("http://localhost:8080/tweets").then(data => {
-    //     $('.tweets-container').prepend(createTweetElement(data.pop()));
-    // }));
-
     $.post("/tweets/", $(this).serialize(), () => {
       $(this).children("textarea").val("");
       $.get("http://localhost:8080/tweets", function (data) {
-        $('.tweets-container').prepend(createTweetElement(data.pop()));
+        let newTweet = createTweetElement(data.pop())
+        newTweet.css("display", "none");
+        $('.tweets-container').prepend(newTweet);
+        newTweet.slideDown(); 
       });
     });
 
