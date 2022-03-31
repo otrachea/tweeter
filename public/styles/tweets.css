@@ -70,6 +70,7 @@
 .tweets-container > article > div {
   font-weight: 600;
   padding: 0 0.3em;
+  overflow-wrap: break-word;
 }
 
 /* Date tweeted */

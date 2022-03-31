@@ -18,6 +18,8 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  /* height: 100%;
+  width: 100%; */
 }
 
 * {
@@ -27,6 +29,8 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+
 
 main {
   width: 90%;
@@ -61,4 +65,24 @@ main > button {
 .fade-out {
   transition: opacity 0.1s linear;
   opacity: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+    .content {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+  main {
+    max-width: 800px;
+    width: 60%;
+    margin: unset;
+    margin-left: 50px;
+  }
 }

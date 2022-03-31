@@ -69,17 +69,24 @@ $(() => {
 
     if ($(".error-container").css("display") !== "none") {
       $(".error-container").slideUp();
-    }    
+    }
 
-    $.post("/tweets/", $(this).serialize())
-      .then(() => $(this).children("textarea").val(""))
-      .then($.get("http://localhost:8080/tweets").then(data => {
+    // $.post("/tweets/", $(this).serialize())
+    //   .then(() => $(this).children("textarea").val(""))
+    //   .then($.get("http://localhost:8080/tweets").then(data => {
+    //     $('.tweets-container').prepend(createTweetElement(data.pop()));
+    // }));
+
+    $.post("/tweets/", $(this).serialize(), () => {
+      $(this).children("textarea").val("");
+      $.get("http://localhost:8080/tweets", function (data) {
         $('.tweets-container').prepend(createTweetElement(data.pop()));
-    }));
+      });
+    });
 
   })
 
-  const showNewTweet = function() {
+  const showNewTweet = function () {
     let section = $(".new-tweet");
     if (section.css("display") === "none") {
       section.slideDown();
@@ -106,7 +113,7 @@ $(() => {
     element.removeClass("fade-in");
   }
 
-  $(document).on("scroll", function() {
+  $(document).on("scroll", function () {
     if (window.scrollY >= 120) {
       fadeIn($("main > button"));
       fadeOut($("nav > div"));
