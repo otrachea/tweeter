@@ -16,3 +16,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+## Todo
+- Dynamic sizing textarea for compose tweet area
+- Change error message to correct one when trying to resubmit an invalid tweet (ie. first tweet was empty and on resubmit, tweet is over 140 characters, error message should change)
