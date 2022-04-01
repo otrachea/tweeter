@@ -1,22 +1,27 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
-
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
-
-## Getting Started
-
-1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
-2. Clone your repository onto your local device.
-3. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-4. Go to <http://localhost:8080/> in your browser.
+Tweeter is a simple, single-page AJAX-base Twitter clone made using jQuery, HTML5, CSS3 and SASS. This project was mainly used to practice fundamental front-end skills and to learn AJAX.
 
 ## Dependencies
 
 - Express
 - Node 5.10.x or above
+- body-parser
+- chance
 
+
+## Final Product
+
+![]()
+![]()
+
+## Compose a new tweet
+To use the site, click on the "Write a new tweet" button in the top right corner and a container will appear at the top of the tweet feed. The cursor will automatically focus the area to type the tweet in. Tweets cannot be empty and be 140 characters or less. A counter in the bottom right corner of the new tweet area shows long how the tweet currently is. Once satisfied with the tweet, can press the tweet button and it will be added to the feed of tweets.
+
+When scrolling far enough down the compose tweet button will disappear and a red button in the bottom right corner will appear. This button takes the user back to the top of the page.
+
+## Known Issues
+There is no functionality for users to login. The three icons at the button of the have no functionality. Upon refreshing the server, all tweets will be lost (except for the two hard-coded ones).
 ## Todo
-- Dynamic sizing textarea for compose tweet area
-- Change error message to correct one when trying to resubmit an invalid tweet (ie. first tweet was empty and on resubmit, tweet is over 140 characters, error message should change)
+- Dark mode button
+- New colour scheme
