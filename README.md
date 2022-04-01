@@ -12,8 +12,8 @@ Tweeter is a simple, single-page AJAX-base Twitter clone made using jQuery, HTML
 
 ## Final Product
 
-![]()
-![]()
+!["Screenshot of the desktop site"](https://github.com/otrachea/tweeter/blob/master/docs/desktop-mode.png)
+!["Screenshot of the tablet/mobile site"](https://github.com/otrachea/tweeter/blob/master/docs/tablet-mobile-mode.png)
 
 ## Compose a new tweet
 To use the site, click on the "Write a new tweet" button in the top right corner and a container will appear at the top of the tweet feed. The cursor will automatically focus the area to type the tweet in. Tweets cannot be empty and be 140 characters or less. A counter in the bottom right corner of the new tweet area shows long how the tweet currently is. Once satisfied with the tweet, can press the tweet button and it will be added to the feed of tweets.
