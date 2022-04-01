@@ -3,7 +3,7 @@ $(() => {
   // Clears textarea on refresh
   $("#tweet-text").val("");
 
-  $("#tweet-text").on("input", function () {
+  $("#tweet-text").on("input", function() {
     // Gets counter text element
     const counter = $(this)
       .siblings("div")
