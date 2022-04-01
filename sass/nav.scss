@@ -1,9 +1,9 @@
 nav {
-  position: sticky;
+  position: fixed;
   top: 0;
   height: 120px;
   width: 100%;
-  background-color: #4056A1;
+  background-color: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,5 +45,12 @@ nav button {
   }
   50% {
     transform: translateY(-10px);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  nav {
+    position: sticky;
+    background-color: #4056A1;
   }
 }
