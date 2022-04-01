@@ -1,3 +1,4 @@
+// Header: user's avatar and username
 body .content > header {
   height: 500px;
   width: 100%;
@@ -9,6 +10,7 @@ body .content > header {
   background-image: url("../images/bg.png");
 }
 
+// Desktop mode
 @media screen and (min-width: 1024px) {
   body .content > header {
     width: 400px;

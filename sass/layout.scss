@@ -28,8 +28,7 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
-
-
+// Contains new tweet tweet area and tweet feed
 main {
   width: 90%;
   margin: 0 auto;
@@ -38,6 +37,7 @@ main {
   position: relative;
 }
 
+// Button in bottom right that scrolls user back to top
 main > button {
   all: unset;
   opacity: 0;
@@ -55,27 +55,31 @@ main > button {
   color: #ffffff;
 }
 
+// Fade in transition
 .fade-in {
   transition: opacity 0.1s linear;
   opacity: 1;
 }
 
+// Fade out transition
 .fade-out {
   transition: opacity 0.1s linear;
   opacity: 0;
 }
 
+// Desktop mode
 @media screen and (min-width: 1024px) {
   body {
     display: flex;
     flex-direction: column;
   }
   
-    .content {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-    }
+  // Contains main + header
+  .content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
 
   main {
     max-width: 800px;

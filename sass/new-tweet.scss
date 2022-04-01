@@ -1,3 +1,4 @@
+// Compose new tweet area
 .new-tweet {
   margin-top: 10px;
   display: none;
@@ -7,6 +8,7 @@
   margin-top: 10px;
 }
 
+// Tweet button
 .new-tweet button {
   background-color: #4056A1;
   color: #fff;
@@ -14,6 +16,7 @@
   width: 110px;
 }
 
+// Contains tweet button and character counter
 .new-tweet form div {
   margin-top: 10px;
   width: 100%;
@@ -22,6 +25,7 @@
   font-family: 'Bungee', cursive;
 }
 
+// Textarea to input new tweet
 .new-tweet textarea {
   display: block;
   box-sizing: padding-box;
@@ -34,17 +38,20 @@
   width: 100%;
 }
 
+// Change placeholder text in textarea
 .new-tweet textarea::placeholder {
   color: #545149;
   opacity: 1;
   font-weight: bolder;
 }
 
+// Char counter
 .counter {
   font-family: 'Bungee', cursive;
   align-self: center;
 }
 
+// Contains textarea, horizontal line and div for counter + tweet button
 .new-tweet form {
   width: 100%;
   display: flex;
@@ -53,6 +60,7 @@
   flex-direction: column;
 }
 
+// Horizontal line
 .new-tweet hr {
   border: 2px solid #545149;
   width: 98%;

@@ -114,19 +114,25 @@ $(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
+  // Adds fade in animation class to css
   const fadeIn = function (element) {
     element.addClass("fade-in");
     element.removeClass("fade-out");
   };
 
+  // Adds fade out animation class to css
   const fadeOut = function (element) {
     element.addClass("fade-out");
     element.removeClass("fade-in");
   };
 
-
+  // Makes navbar + items disappear at certain height when user scrolls down
   $(document).on("scroll", function () {
+    // navCheck is true when site is in desktop mode
+    // navCheck is false when site is in tablet/mobile mode
     let navCheck = (window.innerWidth >= 1024) ? "nav > div" : "nav";
+
+    // 120px is height of navbar
     if (window.scrollY >= 120) {
       fadeIn($("main > button"));
       fadeOut($(navCheck));
@@ -136,6 +142,7 @@ $(() => {
     }
   });
 
+  // Makes textarea in compose tweet area change height dynamically
   $("#tweet-text").on("input", function () {
     this.style.height = "auto";
     this.style.height = (this.scrollHeight) + 'px';

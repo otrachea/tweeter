@@ -1,3 +1,4 @@
+// Navbar
 nav {
   position: fixed;
   top: 0;
@@ -11,12 +12,14 @@ nav {
   overflow: hidden;
 }
 
+// Sets fonts and margin for text in navbar
 nav > span, nav > div { 
   font-family: 'Bungee', cursive;
   color: #FFFFFF;
   margin: 0px 1.5em;
 }
 
+// Compose new tweet button
 nav > div {
   display: flex;
   flex-direction: column;
@@ -24,21 +27,25 @@ nav > div {
   align-self: flex-end;
 }
 
+// Bolden the word "Write" in compose tweet button
 nav span > span {
   font-weight: 600;
 }
 
+// Style red arrows in compose tweet button
 nav i {
   color: red;
   margin: 10px 0 15px;
   animation: bounce 2s infinite;
 }
 
+// Remove all default button styling
 nav button {
   all: unset;
   cursor: pointer;
 }
 
+// Red arrowing bouncing animation
 @keyframes bounce {
   0%, 100% {
     transform: translateY(5px);
@@ -48,6 +55,7 @@ nav button {
   }
 }
 
+// Makes navbar stick to top of screen in desktop mode
 @media screen and (min-width: 1024px) {
   nav {
     position: sticky;

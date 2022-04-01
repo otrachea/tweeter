@@ -1,7 +1,9 @@
+// Container for all tweets
 .tweets-container {
   padding-bottom: 1em;
 }
 
+// Styling for each individual tweet
 .tweets-container > article {
   border: 3px #545149 solid; 
   margin: 2em 0; 

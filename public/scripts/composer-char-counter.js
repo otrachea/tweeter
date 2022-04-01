@@ -1,25 +1,22 @@
-
 $(() => {
-  
-  const clear = function(selector) {
-    $(selector).val("");
-  }
 
-  clear("#tweet-text")
+  // Clears textarea on refresh
+  $("#tweet-text").val("");
 
   $("#tweet-text").on("input", function () {
+    // Gets counter text element
     const counter = $(this)
       .siblings("div")
       .children("output");
 
-    // sets counter text
+    // Sets counter text
     counter.text(140 - $(this).val().length);
 
-    // if over 140 characters, counter is now red
-    if ($(this).val().length > 140 ) {
+    // If over 140 characters, counter is now red
+    if ($(this).val().length > 140) {
       counter.css("color", "#ff0000");
     } else {
       counter.css("color", "");
     }
-  })
+  });
 });
