@@ -20,8 +20,17 @@ To use the site, click on the "Write a new tweet" button in the top right corner
 
 When scrolling far enough down the compose tweet button will disappear and a red button in the bottom right corner will appear. This button takes the user back to the top of the page.
 
+## Extra features
+- The height of the text area in new tweet area dynamically changes depending on the amount of text there is.
+- A bouncing animatino of the arrow in the compose new tweet button in the navbar.
+- When the new tweet box is currently hidden, and the user clicks the compose new tweet button then it is shown, the textarea inside it is auto-focused.
+- When the new tweet box is currently shown, and the user clicks the compose new tweet button, the new tweet box will become hidden.
+- When the user scrolls down far enough a button appears that scrolls user back to top and the compose new tweet button disappears.
+- In mobile mode, the navbar is transparent and when scrolling down the logo and compose new tweet button disappear. They reappear upon scrolling back to the top of the page.
+
 ## Known Issues
 There is no functionality for users to login. The three icons at the button of the have no functionality. Upon refreshing the server, all tweets will be lost (except for the two hard-coded ones).
+
 ## Todo
 - Dark mode button
 - New colour scheme
