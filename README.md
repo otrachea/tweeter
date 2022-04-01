@@ -9,6 +9,8 @@ Tweeter is a simple, single-page AJAX-base Twitter clone made using jQuery, HTML
 - body-parser
 - chance
 
+## Installation
+After cloning the repo, please install all dependencies. Run the server using `npm start local` and then go to `localhost:8080/` to view the site.
 
 ## Final Product
 
